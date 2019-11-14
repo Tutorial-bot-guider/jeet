@@ -236,8 +236,8 @@ if __name__ == '__main__':
     selfbot = SelfBot(bot)
 
     loop = asyncio.get_event_loop()
-    task1 = loop.create_task(bot.start("__"))
-    task2 = loop.create_task(selfbot.start("__", bot=false))
+    task1 = loop.create_task(bot.start("NjQxNzg3NTc1MDAyMDcxMDkw.XczIjw.EhuwwPUeNk3fyw3SM69tY4qTGPI"))
+    task2 = loop.create_task(selfbot.start("NjQxNzg3NTc1MDAyMDcxMDkw.XcjvMQ.DqVccbMJHmdjXhEYf1BaVpVTLCQ", bot=False))
 
     
     gathered = asyncio.gather(task1, task2, loop=loop)
