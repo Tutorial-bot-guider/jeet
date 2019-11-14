@@ -5,7 +5,7 @@ import discord
 import asyncio
 import re
 
-BOT_OWNER_ROLE = 'fetch' # change to what you need
+BOT_OWNER_ROLE = 'AWM' # change to what you need
 #BOT_OWNER_ROLE_ID = "577462888793374738"
 lock = asyncio.Lock()
 
@@ -23,7 +23,7 @@ answer_scores_last = {
 }
 
 oot_channel_id_list = [
-   "613746114016968806","595654063870181386","594148529044324362","599078226131681320","602383647718375434","596248827460190208","601394440644460584"
+   "643316768370065413","595654063870181386","594148529044324362","599078226131681320","602383647718375434","596248827460190208","601394440644460584"
 ]
 
 apgscore = 300
@@ -172,12 +172,12 @@ class Bot(discord.Client):
             three_check = ":x:"
             best_answer = ":four:"
 
-        self.embed=discord.Embed(title="**__TRIVIA SAVAGE | PRO__**", description="**Web Searching** :spy:", color=0xadd8e6 )
+        self.embed=discord.Embed(title="**__JEETOH__**", description="**Web Searching** :spy:", color=0xadd8e6 )
         self.embed.add_field(name="**__ANSWER 1__**", value=f"{answer_scores['1']}.0{one_check}", inline=False)
         self.embed.add_field(name="**__ANSWER 2__**", value=f"{answer_scores['2']}.0{two_check}", inline=False)
         self.embed.add_field(name="**__ANSWER 3__**", value=f"{answer_scores['3']}.0{three_check}", inline=False)
         self.embed.add_field(name="**__ANSWER 4__**", value=f"{answer_scores['4']}.0{four_check}", inline=False)
-        self.embed.set_footer(text=f"CAPTAIN COOL#0044", icon_url="https://cdn.discordapp.com/attachments/604957531164377088/609376358845644810/images_4.jpeg?size=128")
+        self.embed.set_footer(text=f"©reated by Rakshit Rana", icon_url="https://cdn.discordapp.com/attachments/604957531164377088/609376358845644810/images_4.jpeg?size=128")
         self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/604957531164377088/609376298284089354/Jeetoh-App-Referral-code-and-HD-logo-o9mx1eofia7nm7igq7lz9xkq0cf622lbnxk17t3rt4.png")
         self.embed.add_field(name="**__SUGGESTED ANSWER__**",value=f"{best_answer}", inline=True)
                              
@@ -211,7 +211,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "*j":
+        if message.content.lower() == "qj":
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
                 await self.clear_results()
