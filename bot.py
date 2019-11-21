@@ -6,7 +6,7 @@ import asyncio
 import re
 
 BOT_OWNER_ROLE = 'AWM' # change to what you need
-#BOT_OWNER_ROLE_ID = "577462888793374738"
+
 lock = asyncio.Lock()
 
 answer_scores = {
@@ -23,7 +23,7 @@ answer_scores_last = {
 }
 
 oot_channel_id_list = [
-   "643316768370065413","595654063870181386","594148529044324362","599078226131681320","602383647718375434","596248827460190208","601394440644460584"
+    "643316768370065413",
 ]
 
 apgscore = 300
