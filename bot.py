@@ -177,7 +177,7 @@ class Bot(discord.Client):
         self.embed.add_field(name="**__ANSWER 2__**", value=f"{answer_scores['2']}.0{two_check}", inline=False)
         self.embed.add_field(name="**__ANSWER 3__**", value=f"{answer_scores['3']}.0{three_check}", inline=False)
         self.embed.add_field(name="**__ANSWER 4__**", value=f"{answer_scores['4']}.0{four_check}", inline=False)
-        self.embed.set_footer(text=f"©reated by Rakshit Rana", icon_url="https://cdn.discordapp.com/attachments/604957531164377088/609376358845644810/images_4.jpeg?size=128")
+        self.embed.set_footer(text=f"©Created by Rakshit Rana", icon_url="https://cdn.discordapp.com/attachments/604957531164377088/609376358845644810/images_4.jpeg?size=128")
         self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/604957531164377088/609376298284089354/Jeetoh-App-Referral-code-and-HD-logo-o9mx1eofia7nm7igq7lz9xkq0cf622lbnxk17t3rt4.png")
         self.embed.add_field(name="**__SUGGESTED ANSWER__**",value=f"{best_answer}", inline=True)
                              
@@ -211,7 +211,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "qj":
+        if message.content.lower() == "*j":
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
                 await self.clear_results()
@@ -236,8 +236,8 @@ if __name__ == '__main__':
     selfbot = SelfBot(bot)
 
     loop = asyncio.get_event_loop()
-    task1 = loop.create_task(bot.start("NjQxNzg3NTc1MDAyMNjQ3MDAxNjExMjUxNzQ0NzY4.XdZVTA.N8mlUjgfz9hAqg3T2ZzQdUTMFZk"))
-    task2 = loop.create_task(selfbot.start("NjQxNzg3NTc1MDAyMDcxMDkw.XcjvMQ.DqVccbMJHmdjXhEYf1BaVpVTLCQ", bot=False))
+    task1 = loop.create_task(bot.start("NjQ3MDAxNjExMjUxNzQ0NzY4.XdZqWA.TQ1hfyKO2KZE1uJjlHOU202CsOk"))
+    task2 = loop.create_task(selfbot.start("NTQ5Nzc0MDA1MzE0NTE5MDQ0.Xc_nAA.b6WctYsnQSXAIE9bWkwyXtuoEwA", bot=False))
 
     
     gathered = asyncio.gather(task1, task2, loop=loop)
