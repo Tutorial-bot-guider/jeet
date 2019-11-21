@@ -11,9 +11,8 @@ import concurrent
 import datetime
 
 
-BOT_OWNER_ROLE = 'RUNNER' # change to what you need
-#BOT_OWNER_ROLE_ID = "544387608378343446"
-  
+BOT_OWNER_ROLE = 'AWM' # change to what you need
+
  
 
  
