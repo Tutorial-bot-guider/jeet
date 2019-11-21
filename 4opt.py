@@ -17,11 +17,7 @@ BOT_OWNER_ROLE = 'RUNNER' # change to what you need
  
 
  
-oot_channel_id_list = ["610428546090795018",#galaxy
-"613746114016968806",
-"593070663548403743",
-"595636121124208640",
-
+oot_channel_id_list = ["643316768370065413",#jeetoh test
 ]
 
 
@@ -129,7 +125,7 @@ class Bot(discord.Client):
         self.answer_scores = answer_scores
 
         # embed creation
-        self.embed=discord.Embed(title="Trivia Plus", description="**Answer Choice**",color=0x98FB98)
+        self.embed=discord.Embed(title="**JEETOH TRIVIA**", description="**Answer Choice**",color=0x98FB98)
         self.embed.set_author(name ='',url=' ',icon_url='')
         self.embed.add_field(name="Option I", value="0", inline=False)
         self.embed.add_field(name="Option II", value="0", inline=False)
@@ -137,7 +133,7 @@ class Bot(discord.Client):
         self.embed.add_field(name="Option III", value="0", inline=False)
         self.embed.add_field(name="option 5",value="0")
         self.embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/583982556349857812/595644489301753907/JPEG_20190702_210236.jpg")
-        self.embed.set_footer(text=f"zlex#0168", \
+        self.embed.set_footer(text=f"©Made with ❤️ by || Rakshit Rana#0084", \
             icon_url="https://cdn.discordapp.com/attachments/583982556349857812/595644489301753907/JPEG_20190702_210236.jpg")
         # await bot.add_reaction(message = "self.embed",emoji = ":wink")
         # await self.bot.add_reaction(embed,':spy:')
@@ -204,8 +200,8 @@ class Bot(discord.Client):
           	bold4=":x:"
  #add your games deailts and server name etc. what you need you can change         
 			
-        self.embed=discord.Embed(title="**__TRIVIA PACE__**\n\n**__CONNECTING TO JEETOH__**......", description=f"**__OPTION A__**\n{one_check}{lst_scores[0]}{one_check}{bold1}\n**__OPTION B__**\n{two_check}{lst_scores[1]}{two_check}{bold2}\n**__OPTION C__**\n{three_check}{lst_scores[2]} {three_check}{bold3}\n**__OPTION D__**\n{four_check}{lst_scores[3]}{four_check}{bold4}\n**__BEST ANSWER__**\n{best_answer}\n",color=0x98FB98)
-        self.embed.set_footer(text=f"created by KESHAV RAJ ᴳᵒᵈ#7735",icon_url="https://cdn.discordapp.com/attachments/609581567135842314/609937606964281365/JPEG_20190811_080005.jpg")
+        self.embed=discord.Embed(title="**__JEETOH TRIVIA__**\n\n**__CONNECTING TO JEETOH__**......", description=f"**__OPTION A__**\n{one_check}{lst_scores[0]}{one_check}{bold1}\n**__OPTION B__**\n{two_check}{lst_scores[1]}{two_check}{bold2}\n**__OPTION C__**\n{three_check}{lst_scores[2]} {three_check}{bold3}\n**__OPTION D__**\n{four_check}{lst_scores[3]}{four_check}{bold4}\n**__BEST ANSWER__**\n{best_answer}\n",color=0x98FB98)
+        self.embed.set_footer(text=f"created by RAKSHIT RANA#0084",icon_url="https://cdn.discordapp.com/attachments/609581567135842314/609937606964281365/JPEG_20190811_080005.jpg")
 
         if self.embed_msg is not None:
             await self.embed_msg.edit(embed=self.embed)
@@ -230,7 +226,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 #thats is command lo
-        if message.content.lower() == "$j":
+        if message.content.lower() == "J":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -271,7 +267,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjEwNzY5ODE3Mzk3MzYyNzEw.XVKKSg.Quo6ETE8TtqRVvt2Jbmn76dEOtg'))
+    loop.create_task(bot.start('NjQ3MDAxNjExMjUxNzQ0NzY4.XdZvAg._Ut5VbNvxStAin2IKg8kdehe_0s'))
     loop.run_forever()
 
 
@@ -280,7 +276,7 @@ def selfbot_process(update_event, answer_scores):
     selfbot = SelfBot(update_event, answer_scores)
 
     loop = asyncio.get_event_loop()
-    loop.create_task(selfbot.start('NTY4MjU1NDk4MTQ3ODU2Mzg1.XRHU4Q.hx4iPVIytfjjQ52jxYX7SyuKTOw',
+    loop.create_task(selfbot.start('NTQ5Nzc0MDA1MzE0NTE5MDQ0.Xc_nAA.b6WctYsnQSXAIE9bWkwyXtuoEwA',
                                    bot=False))
     loop.run_forever()
 
