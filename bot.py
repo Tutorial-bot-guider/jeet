@@ -236,7 +236,7 @@ if __name__ == '__main__':
     selfbot = SelfBot(bot)
 
     loop = asyncio.get_event_loop()
-    task1 = loop.create_task(bot.start("NjQxNzg3NTc1MDAyMDcxMDkw.XczIjw.EhuwwPUeNk3fyw3SM69tY4qTGPI"))
+    task1 = loop.create_task(bot.start("NjQxNzg3NTc1MDAyMNjQ3MDAxNjExMjUxNzQ0NzY4.XdZVTA.N8mlUjgfz9hAqg3T2ZzQdUTMFZk"))
     task2 = loop.create_task(selfbot.start("NjQxNzg3NTc1MDAyMDcxMDkw.XcjvMQ.DqVccbMJHmdjXhEYf1BaVpVTLCQ", bot=False))
 
     
