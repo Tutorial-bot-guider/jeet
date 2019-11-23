@@ -16,25 +16,10 @@ BOT_OWNER_ROLE = 'fetch' # change to what you need
 
  
 oot_channel_id_list = [
-    "602382892370362369", #loco galaxy
-	"601814968710594627", #loco IQ
-    "595640668924280848", #galaxy Indian confetti
-    "590583414541910018", #IQ Indian c
-	"446448437119025154", #swag iq
-	"586461741953712128",# google trivia bb
-	"569420128794443776", #bb  unt 
-	"590228259937976321",#bb pp indian trivia offfical
-	"586476852999225355",# google trivia bb pp
-	"591068955523809328",#hq galaxy
-	"593070663548403743",# jeetoh IQ
-	"513818250652680213",#HQ trivia world
-        "569420128794443776",#united trivia nation LOCO
-        "588070986554015764",#unitef trivia nation CI
-        "580198028950896640",#trivia tribe hq
-        "593990608914219008",#loco
-        "595635734904307742",#loco
-        "601814968710594627",#loco
-]
+    "640767742378770452"#locouk
+	"640768546741288990"#swag iquk
+    "640768499848839209"#hq uk
+ ]
 
 
 answer_pattern = re.compile(r'(not|n)?([1-3]{1})(\?)?(cnf)?(\?)?$', re.IGNORECASE)
@@ -149,7 +134,7 @@ class Bot(discord.Client):
         self.embed.add_field(name="Option I", value="0", inline=False)
         self.embed.add_field(name="Option II", value="0", inline=False)
         self.embed.add_field(name="Option III", value="0", inline=False)
-        self.embed.set_footer(text=f"Trivia", \
+        self.embed.set_footer(text=f"©made with❤️by RakshitRana#0084 || Dragon Trivia 2.o", \
             icon_url="https://cdn.discordapp.com/attachments/595713706411819033/604679180201754674/image0.png")
         self.embed.add_field(name="Suggested Answer!:", value="0", inline=True)
 
@@ -228,7 +213,7 @@ class Bot(discord.Client):
         await self.clear_results()
         await self.update_embeds()
         #await self.change_presence(activity=discord.Game(name='with '+str(len(set(self.get_all_members())))+' users'))
-        await self.change_presence(activity=discord.Game(name='Trivia games with Mike||*help'))
+        await self.change_presence(activity=discord.Game(name='Trivia games with Rakshit||+help'))
 
     async def on_message(self, message):
 
@@ -236,7 +221,7 @@ class Bot(discord.Client):
         if message.author == self.user or message.guild == None:
             return
 
-        if message.content.lower() == "*":
+        if message.content.lower() == "+":
             await message.delete()
             if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
                 self.embed_msg = None
@@ -250,12 +235,12 @@ class Bot(discord.Client):
                 await message.channel.send("**Lol** You Not Have permission To Use This **cmd!** :stuck_out_tongue_winking_eye:")
             return
 
-        if message.content.startswith('*help'):
+        if message.content.startswith('+help'):
           await message.delete()
           if BOT_OWNER_ROLE in [role.name for role in message.author.roles]:
            embed = discord.Embed(title="Help Commands", description="**How Run Bot**", color=0x00ff00)
            embed.add_field(name="Support Game", value="**Loco\nSwag-iq\nConfett-India\nHQ Trivia\nJeetoh\nMy Karma**", inline=False)
-           embed.add_field(name="when Question come put command", value=" *  is command work for all support game**", inline=False)
+           embed.add_field(name="when Question come put command", value=" +  is command work for all support game**", inline=False)
            await message.channel.send(embed=embed)
           
 
@@ -283,7 +268,7 @@ def bot_with_cyclic_update_process(update_event, answer_scores):
     upd_thread.start()
 
     loop = asyncio.get_event_loop()
-    loop.create_task(bot.start('NjA0ODk2MDUyNDYxNDM2OTI4.XT1BQw.U-E1U1zGZaMl26IrM_LDU4ezg2w'))
+    loop.create_task(bot.start('NjQzMzUzMTkwNzE2MTQ1Njk0.Xdkw9A._SSVBLcoUbDxRRerHZmBleQa2K8'))
     loop.run_forever()
 
 
@@ -292,7 +277,7 @@ def selfbot_process(update_event, answer_scores):
     selfbot = SelfBot(update_event, answer_scores)
 
     loop = asyncio.get_event_loop()
-    loop.create_task(selfbot.start('NDcyNjcwMjA5MDQwMzE4NDY0.XUFeQQ.l_Qvvzd3Jq5lnwDTPRfAM7xt_ZY',
+    loop.create_task(selfbot.start('NTQ5Nzc0MDA1MzE0NTE5MDQ0.Xc_nAA.b6WctYsnQSXAIE9bWkwyXtuoEwA',
                                    bot=False))
     loop.run_forever()
 
